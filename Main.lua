@@ -743,7 +743,11 @@ Cool.MouseButton1Click:Connect(function()
 
 
 			end
-
+            if  game:GetService("Workspace").CoreFolder.Values.Cooling.ECoolantFill.Value >= 20 then
+                if game:GetService("Workspace").CoreFolder.CoreTemp.Value >= 3000 then
+                    fireclickdetector(game:GetService("Workspace").CoreFolder.ECoolant.CoolingDischarge.Button.CD)
+                end
+            end
 
 		end
 
