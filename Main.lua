@@ -473,8 +473,7 @@ Shutdown.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
 Shutdown.BorderSizePixel = 0
 
 
-Shutdown.Position = UDim2.new(0.498293519, 0, 5.22222233, 0)
-
+Shutdown.Position = UDim2.new(0.498293519, 0, 5.25, 0)
 
 Shutdown.Size = UDim2.new(0.5, 0, 1.19444442, 0)
 
@@ -584,7 +583,7 @@ local function JRFSGW_fake_script() -- Status.LocalScript
 
 
 			script.Parent.Text = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.Text
-
+			script.Parent.TextColor = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.TextColor
 
 		end
 
@@ -686,7 +685,7 @@ end)
 Normal.MouseButton1Click:Connect(function()
 
 
-	heatStatus = 1
+	heatStatus = 2
 
 
 end)
@@ -829,27 +828,7 @@ Shutdown.MouseButton1Click:Connect(function()
 
 
 	if game:GetService("Workspace").CoreFolder.ShutdownSequence.ShutdownAvailable.Value == true then
-
-
-		game.StarterGui:SetCore("SendNotification", {
-
-
-			Title = "ACG Script",
-
-
-			Text = "Ready to start?",
-
-
-			Duration = 999999999999999,
-
-
-			Callback = bindable,
-
-
-			Button1 = "Ready!"
-
-
-		})
+		yes()
 
 
 	else
@@ -873,7 +852,7 @@ Shutdown.MouseButton1Click:Connect(function()
 	end
 
 
-	bindable.OnInvoke = function()
+	yes = function()
 
 
 		local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
@@ -1037,4 +1016,7 @@ Shutdown.MouseButton1Click:Connect(function()
 	end)
 
 
+end)
+spawn(function()
+	Temp.Text = tostring(game:GetService("Workspace").CoreFolder.CoreTemp).." C"
 end)
