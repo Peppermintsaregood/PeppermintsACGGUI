@@ -1018,5 +1018,7 @@ Shutdown.MouseButton1Click:Connect(function()
 
 end)
 spawn(function()
-	Temp.Text = tostring(game:GetService("Workspace").CoreFolder.CoreTemp.Value).." C"
+	while wait() do
+		Temp.Text = tostring(game:GetService("Workspace").CoreFolder.CoreTemp.Value).." C"
+	end
 end)
