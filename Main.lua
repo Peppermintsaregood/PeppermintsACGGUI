@@ -640,10 +640,10 @@ Heat.MouseButton1Click:Connect(function()
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.Four.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.One.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.Four.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.One.CD)
 
 
 			if game:GetService("Workspace").CoreFolder.Coolant.Value == true then
@@ -712,10 +712,10 @@ Cool.MouseButton1Click:Connect(function()
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.One.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.Four.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.One.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.One.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
 
 
 			if game:GetService("Workspace").CoreFolder.Coolant.Value == false then
@@ -857,7 +857,7 @@ Shutdown.MouseButton1Click:Connect(function()
 
 
 	yes = function()
-
+		print("STARTED")
 
 		local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 
