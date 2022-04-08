@@ -495,25 +495,21 @@ Scale.MouseButton1Click:Connect(function()
 			if game:GetService("Workspace").CoreFolder.Fan2.Value == false then
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.FanSystem.FanButtons.F2.shinybutotn.CD)
 			end
-			if  game:GetService("Workspace").CoreFolder.Values.Cooling.ECoolantFill.Value >= 20 then
-				if game:GetService("Workspace").CoreFolder.CoreTemp.Value >= 3000 then
-					fireclickdetector(game:GetService("Workspace").CoreFolder.ECoolant.CoolingDischarge.Button.CD)
-				end
-			end
+
 		end
-		local num1 = tonumber(num1.Text)
-		local num2 = tonumber(num2.Text)
+		local num11 = tonumber(num1.Text)
+		local num22 = tonumber(num2.Text)
 		local temp = game:GetService("Workspace").CoreFolder.Values.Cooling.ECoolantFill
 		--initilization
 
 		while heatStatus == 3 do
 			wait()
-			if temp.Value >= num2 then
+			if temp.Value >= num22 then
 				-- tempature to high
-				heat()
+				cold()
 			else
 				-- temp to low
-				if temp.Value <= num1 then
+				if temp.Value <= num11 then
 					heat()
 				else
 					cold()
