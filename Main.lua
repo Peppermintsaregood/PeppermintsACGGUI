@@ -464,6 +464,8 @@ Cool.MouseButton1Click:Connect(function()
 	
 end)
 Scale.MouseButton1Click:Connect(function()
+	heatStatus = 9
+	wait(0.1)
 	heatStatus = 3
 	spawn(function()
 		local heat = function()
