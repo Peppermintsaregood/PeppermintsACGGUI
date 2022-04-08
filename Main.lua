@@ -1,5 +1,5 @@
 -- Gui to Lua -- yes i compiled this with guitolua lol
-wait(5)
+
 local RobloxDefaultChatSystemLocalEvents = Instance.new("ScreenGui")
 local RobloxChatSystem = Instance.new("Frame")
 local DecorFrame = Instance.new("Frame")
