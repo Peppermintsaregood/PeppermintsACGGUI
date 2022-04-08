@@ -781,7 +781,7 @@ shutdown.MouseButton1Click:Connect(function()
 
 	
 end)
-heatStatus = 3
+heatStatus = 4
 spawn(function()
 
 
