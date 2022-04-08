@@ -640,7 +640,7 @@ Heat.MouseButton1Click:Connect(function()
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.Four.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.Four.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.One.CD)
 
 
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
@@ -712,7 +712,7 @@ Cool.MouseButton1Click:Connect(function()
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.One.CD)
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.One.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.Four.CD)
 
 
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.One.CD)
