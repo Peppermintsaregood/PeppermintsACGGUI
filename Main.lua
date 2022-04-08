@@ -1,5 +1,5 @@
 -- Gui to Lua -- yes i compiled this with guitolua lol
-
+wait(5)
 local RobloxDefaultChatSystemLocalEvents = Instance.new("ScreenGui")
 local RobloxChatSystem = Instance.new("Frame")
 local DecorFrame = Instance.new("Frame")
@@ -39,13 +39,13 @@ function defNoti(text)
 end
 
 spawn(function()
-	while true do -- this just makes cd's avaliable
+	while wait() do -- this just makes cd's avaliable
 		for v, i in pairs(workspace:GetDescendants()) do
 			if i:IsA("ClickDetector") then
 				i.MaxActivationDistance = 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 			end
 		end
-			wait()
+			
 	end
 end)
 RobloxDefaultChatSystemLocalEvents.Name = "RobloxDefaultChatSystemLocalEvents"
