@@ -562,16 +562,16 @@ local function JRFSGW_fake_script() -- Status.LocalScript
 
 	while wait() do
 
-
+		pcall(function()
 		if game:GetService("Workspace").CoreFolder.RCoreOnline.Value == true then
 
-
+			
 			script.Parent.Text = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.Text
 			script.Parent.TextColor = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.TextColor
 
 		end
 
-
+		end)
 	end
 
 
@@ -1008,6 +1008,8 @@ Shutdown.MouseButton1Click:Connect(function()
 end)
 spawn(function()
 	while wait() do
-		Temp.Text = tostring(game:GetService("Workspace").CoreFolder.CoreTemp.Value).." C"
+			pcall(function()
+		Temp.Text = tostring(game:GetService("Workspace").CoreFolder.CoreTemp.Value).."C"
+					end)
 	end
 end)
