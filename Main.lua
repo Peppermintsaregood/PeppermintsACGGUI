@@ -9,7 +9,7 @@ local Heat = Instance.new("TextButton")
 local NoMod = Instance.new("TextButton")
 local Scale = Instance.new("TextButton")
 local num1 = Instance.new("TextBox")
-local num2 = Instance.new("TextBox")
+
 local TextLabel = Instance.new("TextLabel")
 local mod = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
@@ -138,7 +138,7 @@ num1.Parent = Frame1
 num1.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
 num1.BorderSizePixel = 0
 num1.Position = UDim2.new(0, 0, 8.45454502, 0)
-num1.Size = UDim2.new(0.400000006, 0, 1.82559192, 0)
+num1.Size = UDim2.new(1, 0, 1.82559192, 0)
 num1.ZIndex = 98
 num1.Font = Enum.Font.SourceSans
 num1.Text = ""
@@ -147,33 +147,9 @@ num1.TextScaled = true
 num1.TextSize = 14.000
 num1.TextWrapped = true
 
-num2.Name = "num2"
-num2.Parent = Frame1
-num2.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
-num2.BorderSizePixel = 0
-num2.Position = UDim2.new(0.596899211, 0, 8.45454502, 0)
-num2.Size = UDim2.new(0.400000006, 0, 1.82559192, 0)
-num2.ZIndex = 98
-num2.Font = Enum.Font.SourceSans
-num2.Text = ""
-num2.TextColor3 = Color3.fromRGB(0, 0, 0)
-num2.TextScaled = true
-num2.TextSize = 14.000
-num2.TextWrapped = true
 
-TextLabel.Parent = Frame1
-TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.BackgroundTransparency = 1.000
-TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.400000036, 0, 8.45454502, 0)
-TextLabel.Size = UDim2.new(0.196899176, 0, 1.85584605, 0)
-TextLabel.ZIndex = 5
-TextLabel.Font = Enum.Font.Roboto
-TextLabel.Text = "-"
-TextLabel.TextColor3 = Color3.fromRGB(173, 173, 173)
-TextLabel.TextScaled = true
-TextLabel.TextSize = 14.000
-TextLabel.TextWrapped = true
+
+
 
 mod.Name = "mod"
 mod.Parent = Frame1
@@ -500,22 +476,16 @@ Scale.MouseButton1Click:Connect(function()
 
 		end
 		local num11 = tonumber(num1.Text)
-		local num22 = tonumber(num2.Text)
 		local temp = game:GetService("Workspace").CoreFolder.CoreTemp
 		--initilization
 
 		while heatStatus == 3 do
 			wait()
-			if temp.Value >= num22 then
-				-- tempature to high
-				cold()
-			else
-				-- temp to low
-				if temp.Value <= num11 then
-					heat()
-				end
-				
-			end
+            if temp.Value > num11 then
+                cold()
+            else
+                heat()
+            end
 		end
 	end)
 end)
