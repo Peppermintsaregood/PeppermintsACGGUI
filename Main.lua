@@ -258,7 +258,7 @@ TextLabel_3.Position = UDim2.new(0, 0, 7.5, 0)
 TextLabel_3.Size = UDim2.new(1, 0, 5.9545455, 0)
 TextLabel_3.ZIndex = 9000
 TextLabel_3.Font = Enum.Font.RobotoMono
-TextLabel_3.Text = "CMDS: ".."\n".."/ecoolant [true/false] -- turns ecoolant valves on(if true) and off(if false)"
+TextLabel_3.Text = "CMDS: ".."\n".."/ecoolant [true/false] -- turns ecoolant valves off"
 TextLabel_3.TextColor3 = Color3.fromRGB(189, 189, 189)
 TextLabel_3.TextScaled = true
 TextLabel_3.TextSize = 14.000
@@ -822,17 +822,6 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 		local split = string.split((string.lower(msg)), " ")
 		for v, i in pairs(split) do
 				if i == "/ecoolant" then
-						if split[(v+1)] == "true" then
-								ecool = true
-						elseif split[(split[v+1])] == "false" then
-							ecool = false
-						end
-				end
-		end
-end)
-	spawn(function()
-			while wait(1) do
-				if ecool == true then
 					        local oFRAME = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
        if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.LED.LED.BrickColor == BrickColor.new("Shamrock") then
            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.Valve.Part.CFrame
@@ -852,28 +841,6 @@ end)
            fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.Valve["Meshes/valve2"].PrAtt["3"])
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
            end
-
-				else
-					        local oFRAME = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-       if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.LED.LED.BrickColor ~= BrickColor.new("Shamrock") then
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.Valve.Part.CFrame
-           wait(0.2)
-            fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.Valve["Meshes/valve2"].PrAtt["1"])
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
-       end
-          if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.LED.LED.BrickColor ~= BrickColor.new("Shamrock") then
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.Valve.Part.CFrame
-           wait(0.2)
-            fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.Valve["Meshes/valve2"].PrAtt["2"])
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
-           end
-          if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.LED.LED.BrickColor ~= BrickColor.new("Shamrock") then
-           game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.Valve.Part.CFrame  
-           wait(0.2)
-           fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.Valve["Meshes/valve2"].PrAtt["3"])
-            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
-           end
-
 				end
-			end
-	end)
+		end
+end)
