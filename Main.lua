@@ -511,8 +511,6 @@ Scale.MouseButton1Click:Connect(function()
 				-- temp to low
 				if temp.Value <= num11 then
 					heat()
-				else
-					cold()
 				end
 				
 			end
