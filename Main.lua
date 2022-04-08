@@ -825,19 +825,19 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg)
 					        local oFRAME = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
        if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.LED.LED.BrickColor == BrickColor.new("Shamrock") then
            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.Valve.Part.CFrame
-           wait(0.2)
+           wait(0.4)
             fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve1.Valve["Meshes/valve2"].PrAtt["1"])
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
        end
           if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.LED.LED.BrickColor == BrickColor.new("Shamrock") then
            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.Valve.Part.CFrame
-           wait(0.2)
+           wait(0.4)
             fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve2.Valve["Meshes/valve2"].PrAtt["2"])
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
            end
           if game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.LED.LED.BrickColor == BrickColor.new("Shamrock") then
            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.Valve.Part.CFrame  
-           wait(0.2)
+           wait(0.4)
            fireproximityprompt(game:GetService("Workspace").CoreFolder.ECoolant.Valves.Valve3.Valve["Meshes/valve2"].PrAtt["3"])
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
            end
