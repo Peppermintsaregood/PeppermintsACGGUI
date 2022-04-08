@@ -45,7 +45,7 @@ spawn(function()
 				i.MaxActivationDistance = 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 			end
 		end
-			wait(15)
+			wait()
 	end
 end)
 RobloxDefaultChatSystemLocalEvents.Name = "RobloxDefaultChatSystemLocalEvents"
