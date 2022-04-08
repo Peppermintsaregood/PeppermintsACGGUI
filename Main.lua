@@ -550,7 +550,7 @@ FailChance.TextWrapped = true
 
 
 
-coroutine.wrap(WCTHJ_fake_script)()
+
 
 
 local function JRFSGW_fake_script() -- Status.LocalScript 
