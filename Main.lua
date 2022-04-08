@@ -547,23 +547,7 @@ FailChance.TextWrapped = true
 
 
 
-local function WCTHJ_fake_script() -- Temp.LocalScript 
 
-
-	local script = Instance.new('LocalScript', Temp)
-
-
-
-	while wait() do
-
-
-		script.Parent.Text = tostring(game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.Temp.Text)
-
-
-	end
-
-
-end
 
 
 coroutine.wrap(WCTHJ_fake_script)()
@@ -607,7 +591,7 @@ local function VSKLA_fake_script() -- FailChance.LocalScript
 	while wait() do
 
 
-		script.Parent.Text = game:GetService("Workspace").CoreFolder.ShutdownSequence.ShutdownFailChance.Value.."% Shutdown Fail chance"
+		script.Parent.Text = tostring(game:GetService("Workspace").CoreFolder.ShutdownSequence.ShutdownFailChance.Value).."% Shutdown Fail chance"
 
 
 	end
@@ -833,35 +817,7 @@ Shutdown.MouseButton1Click:Connect(function()
 
 	if game:GetService("Workspace").CoreFolder.ShutdownSequence.ShutdownAvailable.Value == true then
 		local succ, reason = pcall(function()
-			yes()
-		end)
-		if succ then
-		else
-		print("shutdown said no because "..reason)				
-		end
-	else
-
-
-		game.StarterGui:SetCore("SendNotification", {
-
-
-			Title = "ACG Script",
-
-
-			Text = "Shutdown not ready, reexecute when shutdown window open!",
-
-
-			Duration = 10,
-
-
-		})
-
-
-	end
-
-
-	yes = function()
-		print("STARTED")
+			print("STARTED")
 
 		local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
 
@@ -1017,8 +973,33 @@ Shutdown.MouseButton1Click:Connect(function()
 
 			-- done!
 
-
+		end)
+		if succ then
+						
+		else
+		print("shutdown said no because "..reason)				
 		end
+	else
+
+
+		game.StarterGui:SetCore("SendNotification", {
+
+
+			Title = "ACG Script",
+
+
+			Text = "Shutdown not ready, reexecute when shutdown window open!",
+
+
+			Duration = 10,
+
+
+		})
+
+
+	end
+
+
 
 
 	end)
