@@ -527,28 +527,39 @@ end)
 NoMod.MouseButton1Click:Connect(function()
 	heatStatus = 4
 end)
-
+local pumps = false
 pumpsOn.MouseButton1Click:Connect(function()
 	defNoti("Pumps enabled!")
-	local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
-	local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
-	local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
-	local pump4stopcd = game:GetService("Workspace").CoolantPumps.Pump4.ControlRiser.Buttons
-	fireclickdetector(pump1stopcd.start.CD)
-	fireclickdetector(pump2stopcd.start.CD)
-	fireclickdetector(pump3stopcd.start.CD)
-	fireclickdetector(pump4stopcd.start.CD)
+	spawn(function()
+		pumps = true
+		while pumps == true then
+				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
+				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
+				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
+				local pump4stopcd = game:GetService("Workspace").CoolantPumps.Pump4.ControlRiser.Buttons
+				fireclickdetector(pump1stopcd.start.CD)
+				fireclickdetector(pump2stopcd.start.CD)
+				fireclickdetector(pump3stopcd.start.CD)
+				fireclickdetector(pump4stopcd.start.CD)	
+		end
+	end)
+
 end)
 pumpsOff.MouseButton1Click:Connect(function()
 	defNoti("Pumps disabled!")
-	local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
-	local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
-	local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
-	local pump4stopcd = game:GetService("Workspace").CoolantPumps.Pump4.ControlRiser.Buttons
-	fireclickdetector(pump1stopcd.stop.CD)
-	fireclickdetector(pump2stopcd.stop.CD)
-	fireclickdetector(pump3stopcd.stop.CD)
-	fireclickdetector(pump4stopcd.stop.CD)
+	spawn(function()
+		pumps = false
+		while pumps == false then
+				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
+				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
+				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
+				local pump4stopcd = game:GetService("Workspace").CoolantPumps.Pump4.ControlRiser.Buttons
+				fireclickdetector(pump1stopcd.stop.CD)
+				fireclickdetector(pump2stopcd.stop.CD)
+				fireclickdetector(pump3stopcd.stop.CD)
+				fireclickdetector(pump4stopcd.stop.CD)	
+		end
+	end)
 end)
 shutdown.MouseButton1Click:Connect(function()
 	
