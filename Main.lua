@@ -499,7 +499,7 @@ Scale.MouseButton1Click:Connect(function()
 		end
 		local num11 = tonumber(num1.Text)
 		local num22 = tonumber(num2.Text)
-		local temp = game:GetService("Workspace").CoreFolder.Values.Cooling.ECoolantFill
+		local temp = game:GetService("Workspace").CoreFolder.CoreTemp
 		--initilization
 
 		while heatStatus == 3 do
