@@ -819,7 +819,7 @@ spawn(function()
 end)
 local ecool = true
 game.Players.LocalPlayer.Chatted:Connect(function(msg)
-		local split = string.split((string.lower(msg), " ")
+		local split = string.split((string.lower(msg)), " ")
 		for v, i in pairs(split) do
 				if i == "/ecoolant" then
 						if split[(v+1)] == "true" then
