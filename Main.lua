@@ -532,7 +532,7 @@ pumpsOn.MouseButton1Click:Connect(function()
 	defNoti("Pumps enabled!")
 	spawn(function()
 		pumps = true
-		while pumps == true then
+		while pumps == true do
 				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
 				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
 				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
@@ -549,7 +549,7 @@ pumpsOff.MouseButton1Click:Connect(function()
 	defNoti("Pumps disabled!")
 	spawn(function()
 		pumps = false
-		while pumps == false then
+		while pumps == false do
 				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
 				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
 				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
