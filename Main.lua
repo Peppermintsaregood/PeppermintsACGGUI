@@ -563,13 +563,13 @@ local function JRFSGW_fake_script() -- Status.LocalScript
 	while wait() do
 
 		pcall(function()
-		if game:GetService("Workspace").CoreFolder.RCoreOnline.Value == true then
+		
 
 			
 			script.Parent.Text = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.Text
 			script.Parent.TextColor = game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.CoreStatus.TextColor
 
-		end
+		
 
 		end)
 	end
