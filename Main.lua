@@ -500,6 +500,36 @@ pumpsOn.MouseButton1Click:Connect(function()
 		pumps = true
 		while pumps == true do
 					wait()
+					local p1v = game:GetService("Workspace").CoreFolder.Maintainance.Coolant.Pumps.Pump1S
+local p2v = game:GetService("Workspace").CoreFolder.Maintainance.Coolant.Pumps.Pump2S
+local p3v = game:GetService("Workspace").CoreFolder.Maintainance.Coolant.Pumps.Pump3S
+local p4v = game:GetService("Workspace").CoreFolder.Maintainance.Coolant.Pumps.Pump4S
+local p1p = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
+local p2p = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
+local p3p = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
+local p4p = game:GetService("Workspace").CoolantPumps.Pump4.ControlRiser.Buttons
+					        -- automatic coolant pump stablization!
+        -- prevents idiots from overloading pumps.
+        if p1v.Value > 7.5 then
+           fireclickdetector(p1p.minus.CD)
+        elseif p1v.Value < 7.5 then
+            fireclickdetector(p1p.plus.CD)
+        end
+                if p2v.Value > 7.5 then
+           fireclickdetector(p2p.minus.CD)
+        elseif p3v.Value < 7.5 then
+            fireclickdetector(p2p.plus.CD)
+        end
+                if p3v.Value > 7.5 then
+           fireclickdetector(p3p.minus.CD)
+        elseif p1v.Value < 7.5 then
+            fireclickdetector(p3p.plus.CD)
+        end
+                if p4v.Value > 7.5 then
+           fireclickdetector(p4p.minus.CD)
+        elseif p4v.Value < 7.5 then
+            fireclickdetector(p4p.plus.CD)
+        end
 				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
 				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
 				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
