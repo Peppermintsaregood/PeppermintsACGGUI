@@ -39,12 +39,13 @@ function defNoti(text)
 end
 
 spawn(function()
-	while wait(30) do -- this just makes cd's avaliable
+	while true do -- this just makes cd's avaliable
 		for v, i in pairs(workspace:GetDescendants()) do
 			if i:IsA("ClickDetector") then
 				i.MaxActivationDistance = 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
 			end
 		end
+			wait(15)
 	end
 end)
 RobloxDefaultChatSystemLocalEvents.Name = "RobloxDefaultChatSystemLocalEvents"
