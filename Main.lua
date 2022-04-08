@@ -557,7 +557,7 @@ local function WCTHJ_fake_script() -- Temp.LocalScript
 	while wait() do
 
 
-		script.Parent.Text = tostring(game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.Temp.Value)
+		script.Parent.Text = tostring(game:GetService("Workspace").CoreFolder.CoreFunctions.TempScreen.Screen.SurfaceGui.Temp.Text)
 
 
 	end
@@ -832,9 +832,13 @@ Shutdown.MouseButton1Click:Connect(function()
 
 
 	if game:GetService("Workspace").CoreFolder.ShutdownSequence.ShutdownAvailable.Value == true then
-		yes()
-
-
+		local succ, reason = pcall(function()
+			yes()
+		end)
+		if succ then
+		else
+		print("shutdown said no because "..reason)				
+		end
 	else
 
 
