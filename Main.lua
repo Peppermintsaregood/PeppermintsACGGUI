@@ -533,6 +533,7 @@ pumpsOn.MouseButton1Click:Connect(function()
 	spawn(function()
 		pumps = true
 		while pumps == true do
+					wait()
 				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
 				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
 				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
@@ -550,6 +551,7 @@ pumpsOff.MouseButton1Click:Connect(function()
 	spawn(function()
 		pumps = false
 		while pumps == false do
+					wait()
 				local pump1stopcd = game:GetService("Workspace").CoolantPumps.Pump1.ControlRiser.Buttons
 				local pump2stopcd = game:GetService("Workspace").CoolantPumps.Pump2.ControlRiser.Buttons
 				local pump3stopcd = game:GetService("Workspace").CoolantPumps.Pump3.ControlRiser.Buttons
