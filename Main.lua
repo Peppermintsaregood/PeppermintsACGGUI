@@ -152,8 +152,9 @@ local TextLabel_6 = Instance.new("TextLabel")
 
 local heatStatus = 1
 
-wip.Text = "Lag removal(GRAPHICS WILL LOOK BAD!)"
+
 wip.MouseButton1Click:Connect(function()
+	game.Lighting.GlobalShadows = false
 	for v, i in pairs(workspace:GetDescendants()) do
 		if i:IsA("Texture") then
 			i:remove()
@@ -3214,7 +3215,7 @@ changed2()
 
 
 
-
+wip.Text = "Lag removal(GRAPHICS WILL LOOK BAD!)"
 
 
 
