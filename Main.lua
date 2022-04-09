@@ -155,11 +155,14 @@ local heatStatus = 1
 
 wip.MouseButton1Click:Connect(function()
 	game.Lighting.GlobalShadows = false
+	game.Lighting.DepthOfField:Remove()
 	for v, i in pairs(workspace:GetDescendants()) do
 		if i:IsA("Texture") then
 			i:remove()
 		elseif i:IsA("BasePart") then
+		    if i.Material ~= Enum.Material.ForceField then
 			i.Material = Enum.Material.SmoothPlastic
+			end
 		elseif i:IsA("ParticleEmitter") then
 		if i.Rate > 100 then			
 			i.Rate = 100
