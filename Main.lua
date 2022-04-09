@@ -152,19 +152,16 @@ local TextLabel_6 = Instance.new("TextLabel")
 
 local heatStatus = 1
 
-wip.Text = "Lag removal(GRAPHICS WILL LOOK BAD!)
+wip.Text = "Lag removal(GRAPHICS WILL LOOK BAD!)"
 wip.MouseButton1Click:Connect(function()
-	for v, i in pairs(workspace:GetDescendants() do
+	for v, i in pairs(workspace:GetDescendants()) do
 		if i:IsA("Texture") then
-			I:remove()
+			i:remove()
 		elseif i:IsA("BasePart") then
 			i.Material = Enum.Material.SmoothPlastic
 		elseif i:IsA("ParticleEmitter") then
 		if i.Rate > 100 then			
 			i.Rate = 100
-		end
-		if i.Size > 1 then
-			i.Size = 1		
 		end
 		end
 	end
@@ -3213,7 +3210,6 @@ heatStatus = 4
 
 
 changed2()
-
 
 
 
