@@ -1,5 +1,5 @@
 -- Gui to Lua -- yes i compiled this with guitolua lol
-
+-- fixed some things
 
 
 
