@@ -1931,8 +1931,6 @@ Heat.MouseButton1Click:Connect(function()
 
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
 
-		    	wait(0.2)
-		    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
             end
 
 
@@ -1948,8 +1946,6 @@ Heat.MouseButton1Click:Connect(function()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.6775618, 21.6380234, 65.8997192, -0.99972868, -3.42367135e-09, -0.0232919808, -2.32123343e-09, 1, -4.73582524e-08, 0.0232919808, -4.72913406e-08, -0.99972868)
                 wait(0.2)
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.Coolant.shinybutotn.ClickDetector)
-                wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
 
 
 
@@ -1966,8 +1962,6 @@ Heat.MouseButton1Click:Connect(function()
 
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.FanSystem.FanButtons.F1.shinybutotn.CD)
 
-      wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
 
 
 			end
@@ -1983,11 +1977,14 @@ Heat.MouseButton1Click:Connect(function()
 
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.FanSystem.FanButtons.F2.shinybutotn.CD)
 
-      wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
+
 
 
 			end
+						if game:GetService("Workspace").CoreFolder.CorePower.Value == 5 or game:GetService("Workspace").CoreFolder.CorePower.Value == 0 then
+		-- oFRAMe, because corepower has highest priority! we dont want const-im going to stop writing this comment because VVV probably is going to look over this script lol
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME			
+	end
         end
 
 
@@ -2036,8 +2033,7 @@ wait()
 
 			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
 
-		    	wait(0.2)
-		    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
+
             end
 
 
@@ -2053,8 +2049,7 @@ wait()
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.6775618, 21.6380234, 65.8997192, -0.99972868, -3.42367135e-09, -0.0232919808, -2.32123343e-09, 1, -4.73582524e-08, 0.0232919808, -4.72913406e-08, -0.99972868)
                 wait(0.2)
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.Coolant.shinybutotn.ClickDetector)
-                wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
+
 
 
 
@@ -2071,8 +2066,6 @@ wait()
 
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.FanSystem.FanButtons.F1.shinybutotn.CD)
 
-      wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
 
 
 			end
@@ -2088,13 +2081,14 @@ wait()
 
 				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.FanSystem.FanButtons.F2.shinybutotn.CD)
 
-      wait(0.2)
-                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME
 
 
 			end
 
-
+	if game:GetService("Workspace").CoreFolder.CorePower.Value == 1 or game:GetService("Workspace").CoreFolder.CorePower.Value == 0 then
+		-- oFRAMe, because corepower has highest priority! we dont want const-im going to stop writing this comment because VVV probably is going to look over this script lol
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME			
+	end
 
 		end
 
