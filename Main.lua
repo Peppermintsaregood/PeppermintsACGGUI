@@ -1981,10 +1981,7 @@ Heat.MouseButton1Click:Connect(function()
 
 
 			end
-						if game:GetService("Workspace").CoreFolder.CorePower.Value == 5 or game:GetService("Workspace").CoreFolder.CorePower.Value == 0 then
-		-- oFRAMe, because corepower has highest priority! we dont want const-im going to stop writing this comment because VVV probably is going to look over this script lol
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME			
-	end
+wait(0.2)
         end
 
 
@@ -2085,11 +2082,7 @@ wait()
 
 			end
 
-	if game:GetService("Workspace").CoreFolder.CorePower.Value == 1 or game:GetService("Workspace").CoreFolder.CorePower.Value == 0 then
-		-- oFRAMe, because corepower has highest priority! we dont want const-im going to stop writing this comment because VVV probably is going to look over this script lol
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oFRAME			
-	end
-
+wait(0.2)
 		end
 
 
