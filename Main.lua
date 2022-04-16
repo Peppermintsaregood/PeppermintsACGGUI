@@ -1914,22 +1914,22 @@ Heat.MouseButton1Click:Connect(function()
 
 
 	 local oFRAME = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-
+		print(game:GetService("Workspace").CoreFolder.CorePower.Value)
             if game:GetService("Workspace").CoreFolder.CorePower.Value ~= 5 or game:GetService("Workspace").CoreFolder.CorePower.Value ~= 0 then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-18.4695568, 21.6380234, 65.8023453, -0.999657393, 2.13007354e-08, 0.0261750724, 2.23627818e-08, 1, 4.02819751e-08, -0.0261750724, 4.08535215e-08, -0.999657393)
                 wait(0.2)
-		    	fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.RCTRPower.Decrease.shinybutotn.ClickDetector)
-		    				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.One.CD)
+		    	fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.RCTRPower.Increase.shinybutotn.ClickDetector)
+		    				fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.PL.Indicator.Model.Four.CD)
 
 
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.One.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Stab.Indicator.Model.Four.CD) -- really vvv? stab is sec and sec is stab? really?
 
 
 
 
-			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.Four.CD)
+			fireclickdetector(game:GetService("Workspace").CoreFolder.CoreFunctions.LaserPanel.Sec.Indicator.Model.One.CD)
 
             end
 
