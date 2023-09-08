@@ -293,6 +293,7 @@ Shutdown.MouseButton1Click:Connect(function()
     abCDefYES = false
     vvvdestroyer()
 end)
+local maintainLoop 
 Maintain.MouseButton1Click:Connect(function()
     abCDefYES = false
     wait()
@@ -300,7 +301,7 @@ Maintain.MouseButton1Click:Connect(function()
     ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
     local last = 1
   
-        loop = runService.Heartbeat:Connect(function()
+        maintainLoop = runService.Heartbeat:Connect(function()
                 if abCDefYES == false then
                     loop:Disconnect()
                     busy = false
@@ -322,3 +323,10 @@ Maintain.MouseButton1Click:Connect(function()
         end)
   
 end)
+while wait() do
+    if abCDefYES == false then
+        if maintainLoop ~= nil then
+            maintainLoop:Disconnect()
+        end
+    end
+end
