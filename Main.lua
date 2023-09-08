@@ -1,4 +1,3 @@
--- quote on quote obsufocated lol
 local uis = game:GetService("UserInputService")
 local runService = game:GetService("RunService")
 local tweenService = game:GetService("TweenService")
@@ -12,12 +11,12 @@ local coreFunctions = coreFolder:WaitForChild("CoreFunctions")
 
 runService.Heartbeat:Connect(function(deltaTime)
     -- reinitiate variables after facility regen
+    if not char or char.Parent == nil then
+        char = player.Character or player.CharacterAdded:Wait()
+    end
     if not coreFolder or not coreFunctions then
         coreFolder = workspace:WaitForChild("CoreFolder")
         coreFunctions = coreFolder:WaitForChild("CoreFunctions")
-    end
-    if not char or char.Parent == nil then
-        char = player.Character or player.CharacterAdded:Wait()
     end
     if coreFolder.Parent == nil or not coreFunctions.Parent == nil then
         coreFolder = workspace:WaitForChild("CoreFolder")
@@ -295,13 +294,13 @@ Shutdown.MouseButton1Click:Connect(function()
     vvvdestroyer()
 end)
 Maintain.MouseButton1Click:Connect(function()
-    maintaina = false
+    abCDefYES = false
     wait()
-    maintaina = true
+    abCDefYES = true
     ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
     local last = 1
     spawn(function()
-        while maintaina == true do
+        while abCDefYES == true do
             wait()
             if coreFolder.CoreTemp.Value > tonumber(TextBox.Text) then
                 if last == 2 then
