@@ -299,22 +299,26 @@ Maintain.MouseButton1Click:Connect(function()
     abCDefYES = true
     ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
     local last = 1
-    spawn(function()
-        while abCDefYES == true do
-            wait()
-            if coreFolder.CoreTemp.Value > tonumber(TextBox.Text) then
-                if last == 2 then
-                    ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
+  
+        loop = runService.Heartbeat:Connect(function()
+                if abCDefYES == false then
+                    loop:Disconnect()
+                    busy = false
                 end
-                last = 1
-                brostop()
-            else
-                if last == 1 then
-                    ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
+                if coreFolder.CoreTemp.Value > tonumber(TextBox.Text) then
+                    if last == 2 then
+                        ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
+                    end
+                    last = 1
+                    brostop()
+                else
+                    if last == 1 then
+                        ummmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm = false
+                    end
+                    last = 2
+                    godIHATEYOU()
                 end
-                last = 2
-                godIHATEYOU()
-            end
-        end
-    end)
+            
+        end)
+  
 end)
